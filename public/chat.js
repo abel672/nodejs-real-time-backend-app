@@ -19,7 +19,12 @@ btn.addEventListener('click', () => {
         handle: handle.value
     });
     // reset the type message after sending the message also
-    feedback.innerHTML = "";
+    socket.emit('typing', {
+        message: '',
+        handle: ''
+    });
+
+    message.value = '';
 });
 
 // listening the 'typing' event when user is texting a message

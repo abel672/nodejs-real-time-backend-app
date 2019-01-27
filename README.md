@@ -13,4 +13,7 @@ https://medium.com/@JoshiRabindra/real-time-chat-app-using-websockets-part-2-38a
 
 
 // kill all process of node in linux (in case the ports keep still open after you close the terminals of node to run the app)
+sudo lsof -i:<PORT_NO>
+sudo kill <PID>
+
   killall -9 node
